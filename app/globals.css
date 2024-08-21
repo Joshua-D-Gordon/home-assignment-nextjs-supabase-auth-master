@@ -8,8 +8,9 @@ body {
 }
 
 main {
-  @apply min-h-screen flex items-center justify-center;
+  @apply h-screen flex items-center justify-center;
 }
+
 
 /* card styles */
 
