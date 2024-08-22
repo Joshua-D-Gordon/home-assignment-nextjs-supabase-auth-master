@@ -61,7 +61,7 @@ h3 {
 }
 
 .navbar-account {
-  @apply flex justify-end gap-7;
+  @apply flex justify-end gap-3;
 }
 
 nav a,

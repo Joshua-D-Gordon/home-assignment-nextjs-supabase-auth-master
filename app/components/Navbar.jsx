@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Logo from './logo.svg';
+import MobileMenu from './MobileMenu';
 
 // components
 // Uncomment when supabase auth ready
@@ -24,7 +25,7 @@ export default function Navbar() {
         </div>
 
         {/* Links in the center */}
-        <div className="navbar-links">
+        <div className="hidden md:flex md:flex-1 md:justify-center md:gap-16">
           <Link
             href="/create-book"
             className={pathname.startsWith('/create-book') ? 'active' : ''}
@@ -50,6 +51,9 @@ export default function Navbar() {
           */}
 
           {/* Uncomment when supabase auth ready */}
+          <div className="block md:hidden">
+            <MobileMenu/>
+          </div>
           {<Profile />}
         </div>
       </div>
