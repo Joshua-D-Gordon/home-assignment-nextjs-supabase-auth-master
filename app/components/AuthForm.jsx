@@ -1,9 +1,23 @@
+'use client'
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../components/logo.svg';
+import { createClient } from '@/utils/supabase/client'
 
 export default function AuthForm({ title, onSubmit, children, alternateText, alternateLink, alternateHref }) {
+    
+    const handleGoogleSignIn = async () => {
+        const supabase = createClient()
+        const {error} = await supabase.auth.signInWithOAuth({
+            provider: 'google',
+        });
+
+        if(error){
+            console.error('Error signing in with Google:', error.message);
+        }
+    };
   return (
     <main>
       <div className="card narrow">
@@ -27,7 +41,10 @@ export default function AuthForm({ title, onSubmit, children, alternateText, alt
             <div className="h-px w-1/4 bg-slate-200"></div>
           </div>
           <div className="w-full flex items-center justify-center">
-            <button className="btn-outline wide flex justify-center gap-2">
+            <button 
+            className="btn-outline wide flex justify-center gap-2"
+            onClick={handleGoogleSignIn}
+            type='button'>
               <Image width="20" height="20" className="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="Google logo" />
               <span className="font-semibold">Google</span>
             </button>
