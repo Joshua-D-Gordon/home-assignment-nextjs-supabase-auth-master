@@ -19,7 +19,7 @@ export async function signup(formData) {
 
   if (error) {
     console.error('Sign-up error:', error.message) // Log the error for debugging
-    redirect('/?message=' + encodeURIComponent(error.message))
+    return { error: error.message };
   }
 
   revalidatePath('/', 'layout')

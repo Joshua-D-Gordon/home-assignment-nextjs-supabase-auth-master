@@ -1,11 +1,26 @@
-import React from 'react';
+'use client'; // Add this line to make the component a client component
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../components/logo.svg';
 import GoogleButton from './GoogleButton';
 
 export default function AuthForm({ title, onSubmit, children, alternateText, alternateLink, alternateHref }) {
-    
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const result = await onSubmit(formData);
+
+    if (result?.error) {
+      setError(result.error); // Set the error message to be displayed
+    } else {
+      // If login is successful, you can handle redirection here if necessary
+    }
+  };
+
   return (
     <main>
       <div className="card narrow">
@@ -15,9 +30,15 @@ export default function AuthForm({ title, onSubmit, children, alternateText, alt
           </div>
           <h2>{title}</h2>
         </div>
-        <form>
+        {error && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4" role="alert">
+            <strong className="font-bold">Error: </strong>
+            <span className="block sm:inline">{error}</span>
+          </div>
+        )}
+        <form onSubmit={handleSubmit}>
           {children}
-          <button formAction={onSubmit} className="btn primary wide mb-4">
+          <button type="submit" className="btn primary wide mb-4">
             Submit
           </button>
         </form>
