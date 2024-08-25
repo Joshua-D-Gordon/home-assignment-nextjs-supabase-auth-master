@@ -56,7 +56,7 @@ export default function Profile() {
         </div>
       ) : (
         <Link href="/login">
-          <button className="btn-outline primary w-20">Login</button>
+          <button className="btn-outline primary w-14 text-sm md:w-20 md:text-lg">Login</button>
         </Link>
       )}
     </div>

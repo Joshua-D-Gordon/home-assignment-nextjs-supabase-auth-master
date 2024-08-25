@@ -19,7 +19,7 @@ export default function MobileMenu() {
           {/* Avatar */}
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="text-purple-700 rounded-full flex items-center justify-center text-4xl"
+            className="text-purple-700 rounded-full flex items-center justify-center text-3xl"
           >
             ☰
           </button>
