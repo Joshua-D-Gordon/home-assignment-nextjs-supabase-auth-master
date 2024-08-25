@@ -1,5 +1,4 @@
-'use client';
-
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -54,7 +53,7 @@ export default function Navbar() {
           <div className="block md:hidden">
             <MobileMenu/>
           </div>
-          {<Profile />}
+          <Profile />
         </div>
       </div>
     </nav>

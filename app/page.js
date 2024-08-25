@@ -59,7 +59,7 @@ export default function Home() {
                     <span className="text-yellow-300 text-2xl">★</span>
                     <span className="text-yellow-300 text-2xl">★</span>
                   </div>
-                  <p className='ml-4 text-sm'>from 2,431+ happy story tellers</p>
+                  <p className='ml-4 text-sm font-semibold'>from 2,431+ happy story tellers</p>
                 </div>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function Home() {
       {/* No Credit Card Required Section */}
       <section className="bg-orange-400 text-white py-12">
         <div className="container mx-auto px-6 lg:px-20 text-center">
-          <h2 className="text-2xl font-bold mb-4">Get Started for Free</h2>
+          <h2 className="text-2xl font-bold mb-4 text-white">Get Started for Free</h2>
           <p className="text-lg mb-6">
             Sign up today and start exploring without any commitments. No credit card required.
           </p>

@@ -34,13 +34,13 @@ export default function MobileMenu() {
                 Create Book
               </button>
               <button
-                onClick={() => handleNavigation('/library')}
+                onClick={() => handleNavigation('library')}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
               >
                 Library
               </button>
               <button
-                onClick={() => handleNavigation('/guide')}
+                onClick={() => handleNavigation('guide')}
                 className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
               >
                 Guide
