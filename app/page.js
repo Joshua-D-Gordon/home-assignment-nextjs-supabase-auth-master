@@ -50,13 +50,16 @@ export default function Home() {
                   </div>
                 </div>
                 
-                {/* 5-Star Reviews */}
-                <div className="flex items-center ml-4">
-                  <span className="text-yellow-300 text-2xl">★</span>
-                  <span className="text-yellow-300 text-2xl">★</span>
-                  <span className="text-yellow-300 text-2xl">★</span>
-                  <span className="text-yellow-300 text-2xl">★</span>
-                  <span className="text-yellow-300 text-2xl">★</span>
+                <div className='flex flex-col items-start justify-center'>
+                  {/* 5-Star Reviews */}
+                  <div className="flex items-center ml-4">
+                    <span className="text-yellow-300 text-2xl">★</span>
+                    <span className="text-yellow-300 text-2xl">★</span>
+                    <span className="text-yellow-300 text-2xl">★</span>
+                    <span className="text-yellow-300 text-2xl">★</span>
+                    <span className="text-yellow-300 text-2xl">★</span>
+                  </div>
+                  <p className='ml-4 text-sm'>from 2,431+ happy story tellers</p>
                 </div>
               </div>
             </div>
