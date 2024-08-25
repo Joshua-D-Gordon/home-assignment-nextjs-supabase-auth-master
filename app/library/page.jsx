@@ -4,8 +4,10 @@ import sharingTree from '../../public/sharingtree.png'
 import hairCut from '../../public/haircut.png'
 import scaredBunny from '../../public/scaredbunny.png'
 import Image from 'next/image';
+import Link from 'next/link';
 
-export default function Library() {
+export default async function Library() {
+
   // Example data for the books
   const books = [
     {
@@ -92,9 +94,11 @@ export default function Library() {
 
       {/* Add New Book Button */}
       <div className="text-right mb-8">
-        <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">
-          Add New Story
-        </button>
+        <Link href="/create-book">
+            <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">
+            Add New Story
+            </button>
+        </Link>
       </div>
 
       {/* Book Cards */}

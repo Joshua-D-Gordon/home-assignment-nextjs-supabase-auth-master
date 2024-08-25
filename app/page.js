@@ -174,13 +174,13 @@ export default function Home() {
             <div className="bg-white shadow-md rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">What is SmartStorytime?</h3>
               <p>
-                SmartStorytime is a personalized storytelling platform that grows with your child, offering engaging and educational content tailored to their age and interests.
+                SmartStorytime is a personalized storytelling platform that grows with your child, offering engaging and educational content tailored to their challengers and hurdels.
               </p>
             </div>
             <div className="bg-white shadow-md rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">How does the personalization work?</h3>
               <p>
-                Our platform uses advanced algorithms to adapt stories based on your child’s preferences, reading level, and learning progress, ensuring each story is perfect for them.
+                Our platform uses advanced algorithms to adapt stories based on your child’s current challenges, reading level, and learning progress, ensuring each story is perfect and meaningful for them.
               </p>
             </div>
             <div className="bg-white shadow-md rounded-lg p-6">
